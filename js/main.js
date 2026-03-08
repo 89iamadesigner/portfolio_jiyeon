@@ -1,18 +1,6 @@
 console.log('hi!');
 
 
-
-// $('.carditems ul').slick({
-//     infinite: true,
-//     slidesToShow: 3,
-//     slidesToScroll: 3,
-//     centerMode: true,  // 중앙 정렬 모드 활성화
-//     centerPadding: '0px', // 중앙 정렬 시 양옆 간격 (필요 없으면 0)
-//     prevArrow: $('.prev'), // HTML에 작성한 .prev 클래스 연결
-//     nextArrow: $('.next'), // HTML에 작성한 .next 클래스 연결
-// });
-
-
 $('.carditems ul').slick({
     infinite: true,
     slidesToShow: 3, // 기본(PC) 개수
@@ -38,4 +26,13 @@ $('.carditems ul').slick({
             }
         }
     ]
+});
+
+let mobileMenuToggle =  $('header .toggle');
+let mobileMenu = $('header .nav-buttons');
+let header = $('header');
+
+mobileMenuToggle.click(function(){
+    mobileMenu.slideToggle();
+    header.toggleClass('active');
 });

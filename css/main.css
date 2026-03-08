@@ -1,4 +1,10 @@
 /* header */
+.toggle {
+    width: 32px;
+    height: 32px;
+    display: none;
+}
+
 header{
     padding: 16px 8px;
     position: fixed;
