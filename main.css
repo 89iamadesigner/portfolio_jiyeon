@@ -22,7 +22,7 @@ header{
 header .logo{
     width: 100px;
     height: 32px;
-    background: url(./images/logo/logo_c.png) no-repeat center;
+    background: url(../images/logo/logo_c.png) no-repeat center;
 
     display: block;
     text-indent: -9999px;
