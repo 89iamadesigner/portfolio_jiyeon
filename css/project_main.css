@@ -1,0 +1,214 @@
+/* myprofile */
+.myprofile-container{
+    margin: 0 auto ;
+    height:  fit-content;
+    background-color: white;
+    max-width: 1200px;
+    padding-bottom: 48px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.myprofile-container ul{
+    display: block;
+    margin: 48px 0;
+}
+.myprofile-container ul li{
+    display: inline-block;
+    justify-content: left; /* 가로 가운데 */
+    align-items: center;   /* 세로 가운데 */
+    width: 100%;
+}
+.myprofile-container img{
+    width: 180px;
+    padding-bottom: 24px;
+}
+.myprofile-container h1{
+    color: #101010;
+    font-size: 32px;
+    font-weight: 400;
+    padding-bottom: 12px;
+}
+.myprofile-container p{
+    color: #101010;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 8px;
+}
+.myprofile-container a{
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: black;
+    padding: 8px;
+    border-radius: 4px; 
+}   
+
+
+/* work me section */
+.work-container-wrap {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-bottom: 116px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.background-container-wrap {
+    margin: 0 auto;
+    max-width: 1200px;
+    /* padding-bottom: 24px; */
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.work-container-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    height: fit-content;
+    margin: 0 auto;
+}
+.work-container-wrap .work-container-items .container-item{
+    flex: 1 ;
+    width: 50%;
+    height: fit-content;
+    vertical-align: top;
+}
+.background-container-wrap .work-container-items .container-item{
+    flex: 1 ;
+    width: 50%;
+    height: fit-content;
+    vertical-align: top;
+
+}
+.container-text-left{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.work-header h1{
+    color: black;
+    font-size: 52px;
+    margin: 0 24px;
+    padding-top: 0;
+    padding-bottom: 32px;
+    font-weight: 900;
+    margin: 0;
+}
+.container-item p{
+    color: black;
+    font-size: 18px;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 12px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+.background-container-wrap h1{
+    color: black;
+    font-size: 48px;
+    margin: 0 24px;
+    padding-top: 0;
+    padding-bottom: 32px;
+    font-weight: 400;
+    margin: 0;
+}
+.container h2{
+    color: black;
+    font-size: 48px;
+    margin: 0 24px;
+    padding-top: 0;
+    padding-bottom: 32px;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* 반응형 설정 */
+@media screen and (max-width: 960px) {
+.work-container-wrap .work-container-items .container-item{
+    flex: 0 0 100%;
+    width: 100%;
+}
+.background-container-wrap .work-container-items .container-item{
+    flex: 0 0 100%;
+    width: 100%;
+}
+}
+
+
+/* 슬라이더 */
+.container.carditems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carditems button{
+    top: 60%;
+    position: absolute;
+    /* transform: translateY(0%); */
+    height: 56px;
+    color: black 20%;
+    z-index: 100;    /* 슬라이드 이미지보다 위로 */
+    cursor: pointer;
+}
+
+/* 버튼을 1200px 바깥기준으로 밀어내기 */
+.carditems .prev {
+    left: -70px; 
+}
+.carditems .next {
+    right: -70px;
+}
+.carditems ul li{
+    padding-right: 10px;
+}
+.container .card-item{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+.card-item img{
+    width: 100%;
+    object-fit: cover;
+    padding-bottom: 16px;
+}
+.card-item p{
+    color: black;
+    font-size: 24px;
+    padding-bottom: 24px;
+}
+
+
+
+.carditems .slick-slide {
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    transform: scale(0.8); 
+}
+
+/* .carditems .slick-slide.slick-center {
+    transform: scale(1); 
+    opacity: 1;
+    z-index: 10; 
+} */
+
+
+/* 화면 너비가 버튼을 포함할 만큼 넉넉하지 않을 때 */
+@media (max-width: 1200px) {
+    .carditems .prev {
+        left: 20px;   /* 왼쪽 안으로 20px 이동 */
+        z-index: 100; /* 슬라이드 이미지보다 위에 오도록 확인 */
+    }
+    .carditems .next {
+        right: 20px;  /* 오른쪽 안으로 20px 이동 */
+        z-index: 100;
+    }
+}
+@media (max-width: 768px) {
+    .card-item img {
+        max-width: 100%; /* 부모 너비에 맞게 */
+        height: auto;    /* 비율 유지 */
+        margin: 0 auto;
+    }
+}

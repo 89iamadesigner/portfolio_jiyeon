@@ -1,0 +1,102 @@
+
+
+
+.container-title h1{
+    color: lightgray;
+}
+.container-items{
+    display: flex;
+    height: fit-content;
+    flex-wrap: wrap; /* 자식이 100%가 되었을 때 다음 줄로 넘어가게 함 */
+    gap: 10px;
+}
+.container-item{
+    display: inline-block;
+	width: 50%;
+    flex: 1 ;
+    height: fit-content;
+	vertical-align: top; 
+    padding-bottom: 64px;
+}
+.container-text-left{
+    display: flex;
+    justify-content: left; 
+    align-items: top; 
+    height: fit-content;
+    text-align: left;
+    /* background-color: orange; */
+}
+.container-text-right{
+    display: flex;
+    justify-content: left; 
+    align-items: top; 
+    height: fit-content;
+    text-align: left;
+    /* background-color: orange; */
+}
+.container-text-left li{
+    padding-bottom: 16px;
+}
+.container-text-right li{
+    padding-bottom: 0px;
+}
+
+
+/* 폰트 : 다양한 경우 */
+.header h1{
+    font-size: 52px;
+    font-weight: 600;
+    padding-bottom: 12px;
+}
+.header h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 32px;
+}
+.header p{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 64px;
+}
+.schools h3{
+    padding-bottom: 8px;
+}
+.schools p{
+    font-size: 15px;
+    margin: 0;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+.standard h3{
+    padding-bottom: 8px;
+}
+.standard p{
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 3px;
+    margin: 0;
+}
+.project h4{
+    font-size: 15px;
+    font-weight: 600;
+    padding-bottom: 3px;
+    margin: 0;
+}
+.project p{
+    font-size: 14px;
+    padding-bottom: 14px;
+    font-weight: 400;
+    padding-left: 24px;
+    margin: 0;
+}
+
+
+/* 반응형 설정 */
+@media screen and (max-width: 768px) {
+.container-item{
+    flex: 0 0 100%;
+    width: 100%;
+ }
+}

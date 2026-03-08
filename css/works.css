@@ -1,0 +1,108 @@
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+    padding-top: 132px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.container-title{
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+    padding-top: 100px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.container-title h1{
+    color: lightgray;
+}
+body{
+    background-color: white;
+}
+
+/* 카드 */
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+    padding-top: 132px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 170px;
+}
+.container-items{
+    display: flex;
+    height: fit-content;
+    flex-wrap: wrap; /* 자식이 100%가 되었을 때 다음 줄로 넘어가게 함 */
+    gap: 16px;
+    padding-bottom: 24px;
+}
+.container-item{
+    width: 50%;
+    flex: 1;
+    background: white;
+    border-radius: 16px;
+    outline: 3px solid lightgray;
+    text-align: left;
+}
+.container-text{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 24px;
+}
+.container-text a{
+    display: flex; 
+    transition: transform 0.2s; 
+    text-decoration: none;
+}
+.container-item{
+    cursor: pointer; /* 마우스 오버 시 손가락 모양 커서 표시 */
+    user-select: none; /* 클릭 시 텍스트가 드래그되는 현상 방지 (선택) */
+}
+/* display: block; 영역 전체 클릭 가능하도록 */
+/* transition: transform 0.2s; 마우스 올렸을 때 효과 */
+/* 마우스 호버 효과 (선택사항) */
+.container-item:hover {
+    transform: translateY(-1px);
+    background-color: #E5FF00;
+    color: blue;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+/* 카드 폰트 */
+.container-items h1{
+    font-size: 28px;
+    font-weight: 600;
+    color: #101010;
+    margin: 0;
+    padding: 8px 0;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.container-items h2{
+    font-size: 16px;
+    font-weight: 600;
+    color: #101010;
+    margin: 0;
+    padding-bottom: 16px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.container-items p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #101010;
+    margin: 0;
+    padding-bottom: 16px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+/* 반응형 설정 */
+@media screen and (max-width: 768px) {
+.container-item{
+    flex: 0 0 100%;
+    height: auto;
+    }
+}
