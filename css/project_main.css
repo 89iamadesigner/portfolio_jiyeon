@@ -126,17 +126,7 @@
     margin: 0;
 }
 
-/* 반응형 설정 */
-@media screen and (max-width: 960px) {
-.work-container-wrap .work-container-items .container-item{
-    flex: 0 0 100%;
-    width: 100%;
-}
-.background-container-wrap .work-container-items .container-item{
-    flex: 0 0 100%;
-    width: 100%;
-}
-}
+
 
 
 /* 슬라이더 */
@@ -207,10 +197,46 @@
         z-index: 100;
     }
 }
+/* 반응형 설정 */
+@media screen and (max-width: 960px) {
+.work-container-wrap .work-container-items .container-item{
+    flex: 0 0 100%;
+    width: 100%;
+}
+.background-container-wrap .work-container-items .container-item{
+    flex: 0 0 100%;
+    width: 100%;
+}
+}
 @media (max-width: 768px) {
     .card-item img {
         max-width: 100%; /* 부모 너비에 맞게 */
         height: auto;    /* 비율 유지 */
-        margin: 0 auto;
+        margin: 0;
     }
+    .background-container-wrap h1{
+    font-size: 40px;
+}
+.container h2{
+    font-size: 40px;
+}
+.carditems button{
+    top: 56%;
+    scale : 85%;
+}
+.carditems .prev {
+    left: -5px; 
+}
+.carditems .next {
+    right: -5px;
+}
+
+.carditems .slick-list {
+        padding: 0 !important; /* 양옆 이미지가 비치는 공간을 없앰 */
+        margin: 0 !important;
+    }
+.carditems .slick-slide {
+    transform: scale(1);
+}
+
 }

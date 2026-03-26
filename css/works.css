@@ -1,11 +1,11 @@
-.container{
+/* .container{
     margin: 0 auto;
     max-width: 1200px;
     position: relative;
     padding-top: 132px;
     padding-left: 24px;
     padding-right: 24px;
-}
+} */
 .container-title{
     margin: 0 auto;
     max-width: 1200px;
@@ -20,6 +20,7 @@
 body{
     background-color: white;
 }
+
 
 /* 카드 */
 .container{
@@ -37,6 +38,7 @@ body{
     flex-wrap: wrap; /* 자식이 100%가 되었을 때 다음 줄로 넘어가게 함 */
     gap: 16px;
     padding-bottom: 24px;
+    
 }
 .container-item{
     width: 50%;
@@ -101,6 +103,10 @@ body{
 }
 /* 반응형 설정 */
 @media screen and (max-width: 768px) {
+.container-items {
+    gap: 16px;
+    margin-bottom: 48px;    
+}
 .container-item{
     flex: 0 0 100%;
     height: auto;

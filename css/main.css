@@ -24,10 +24,17 @@ header{
 header .logo{
     width: 100px;
     height: 32px;
-    background: url(../images/logo/logo_c.png) no-repeat center;
+    background: url(../images/logo/logo_c.png);
+    background-repeat: no-repeat;
+    background-position: center;
 
     display: block;
     text-indent: -9999px;
+    background-size: contain;
+    /* 모질라 기반 브라우저 */
+    image-rendering: -moz-crisp-edges;
+    /* 크롬/사파리 */
+    image-rendering: -webkit-optimize-contrast;
 }
 header .nav-buttons ul {
     display: flex;
